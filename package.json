@@ -1,0 +1,14 @@
+{
+  "name": "blog",
+  "description": "my blog",
+  "version": "0.1.0",
+  "author": "frncsdkrk",
+  "scripts": {
+    "dev": "peco dev",
+    "build": "peco build"
+  },
+  "devDependencies": {
+    "peco": "0.2.2"
+  },
+  "private": true
+}
