@@ -2,13 +2,13 @@
   "name": "blog",
   "description": "my blog",
   "version": "0.1.0",
-  "author": "frncsdkrk",
+  "author": "frncsdrk",
   "scripts": {
-    "dev": "peco dev",
-    "build": "peco build"
+    "dev": "",
+    "build": ""
   },
   "devDependencies": {
-    "peco": "0.2.2"
+    "spectre.css": "0.5.5"
   },
   "private": true
 }

@@ -1,0 +1,24 @@
+.navbar {
+  padding: 1em;
+  background: #eee;
+}
+
+.content-container {
+  width: 800px;
+  margin: 60px auto 40px;
+}
+.description-container {
+  padding: 2em 1em;
+  background: #ddd;
+  text-align: center;
+}
+.posts-summary-container {
+  margin: 2em 0;
+}
+.post-summary {
+  padding: 1em;
+  background: #eef;
+}
+.post-summary-text {
+  margin: 0;
+}

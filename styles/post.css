@@ -1,0 +1,13 @@
+.meta-container {}
+.post-container {}
+.post-title {
+  margin: 1em 0;
+}
+.tldr-container {
+  margin: 0.5em 0;
+  padding: 2em 1em;
+  background: #ddd;
+}
+.post-content {
+  margin: 2em 0;
+}
