@@ -23,19 +23,13 @@
 
       <div class="content-container">
         <div class="meta-container text-gray">
-          11/10/2018 23:48
+          {{ post_meta }}
         </div>
-
+        
         <div class="post-container">
-          <h2 class="post-title">test post</h2>
-          <div class="tldr-container">
-            I have no time to read, so give me three sentences and let me go.
-          </div>
+          <h2 class="post-title">{{ post_title }}</h2>
           <div class="post-content">
-            <p>
-              neat paragraph
-            </p>
-            <img src="https://via.placeholder.com/800x600" alt="placeholder image">
+            {{ post_content }}
           </div>
         </div>
       </div>
