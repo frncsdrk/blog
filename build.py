@@ -34,9 +34,9 @@ def get_post_data(file):
     raw_content = fo.read()
     fo.close()
 
+    # parse content
     content_splits = raw_content.split("---")
     meta = content_splits[1].splitlines()
-    print("post meta section:", meta)
     datetime = meta[1].split(": ")[1]
     title = meta[2].split(": ")[1]
     content = content_splits[2]
@@ -63,6 +63,7 @@ post_summary_template_fo.close()
 
 def create_post_summary(data):
     post_summary_content = post_summary_template_content.replace(POST_SUMMARY_META_PLACEHOLDER, data["datetime"])
+    # create link
     post_summary_content = post_summary_content.replace(POST_SUMMARY_HREF_PLACEHOLDER, POSTS_DIR + "/" + data["file_name"])
     post_summary_content = post_summary_content.replace(POST_SUMMARY_TITLE_PLACEHOLDER, data["title"])
     post_summary_content = post_summary_content.replace(POST_SUMMARY_TEXT_PLACEHOLDER, "") # TODO: add summary to post meta
@@ -85,3 +86,5 @@ index_content = index_template_content.replace(POSTS_LIST_PLACEHOLDER, index_pos
 index_fo = open(INDEX_FILE_NAME, "w")
 index_fo.write(index_content)
 index_fo.close()
+
+print("built site!")
