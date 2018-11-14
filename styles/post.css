@@ -1,5 +1,11 @@
-.meta-container {}
-.post-container {}
+.meta-container {
+  padding: 1em;
+  background: #f8fdfd;
+}
+.post-container {
+  padding: 1em;
+  background: #fafafa;
+}
 .post-title {
   margin: 1em 0;
 }

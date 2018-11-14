@@ -2,6 +2,9 @@
   padding: 1em;
   background: #eee;
 }
+.navbar-brand {
+  font-weight: bold;
+}
 
 .content-container {
   width: 800px;
