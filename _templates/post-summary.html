@@ -1,11 +1,14 @@
 <div class="posts-summary-container">
-  <div class="post-summary">
-    <div class="text-gray">
-        {{ post_meta }}
+    <div class="post-summary">
+        <div class="text-gray">
+            {{ post_meta }}
+        </div>
+        <h3><a href="{{ post_href }}">{{ post_title }}</a></h3>
+        <p class="post-summary-text">
+            {{ post_summary_text }}
+        </p>
+        <div class="tags-container">
+            {{ tags }}
+        </div>
     </div>
-    <h3><a href="{{ post_href }}">{{ post_title }}</a></h3>
-    <p class="post-summary-text">
-        {{ post_summary_text }}
-    </p>
-  </div>
 </div>

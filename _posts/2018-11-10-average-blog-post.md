@@ -1,6 +1,7 @@
 ---
 date: 11/10/2018 23:56
 title: average blog post
+tags: average
 ---
 
 <p>

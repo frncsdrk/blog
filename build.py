@@ -14,6 +14,7 @@ POST_SUMMARY_META_PLACEHOLDER = "{{ post_meta }}"
 POST_SUMMARY_HREF_PLACEHOLDER = "{{ post_href }}"
 POST_SUMMARY_TITLE_PLACEHOLDER = "{{ post_title }}"
 POST_SUMMARY_TEXT_PLACEHOLDER = "{{ post_summary_text }}"
+POST_SUMMARY_TAGS_PLACEHOLDER = "{{ tags }}"
 INDEX_FILE_NAME = "index.html"
 
 # read index template content
@@ -39,6 +40,7 @@ def get_post_data(file):
     meta = content_splits[1].splitlines()
     datetime = meta[1].split(": ")[1]
     title = meta[2].split(": ")[1]
+    tags = meta[3].split(": ")[1].split(', ')
     content = content_splits[2]
 
     return {
@@ -46,6 +48,7 @@ def get_post_data(file):
         "raw_content": content,
         "datetime": datetime,
         "title": title,
+        "tags": tags,
         "content": content
     }
 
@@ -67,6 +70,10 @@ def create_post_summary(data):
     post_summary_content = post_summary_content.replace(POST_SUMMARY_HREF_PLACEHOLDER, POSTS_DIR + "/" + data["file_name"])
     post_summary_content = post_summary_content.replace(POST_SUMMARY_TITLE_PLACEHOLDER, data["title"])
     post_summary_content = post_summary_content.replace(POST_SUMMARY_TEXT_PLACEHOLDER, "") # TODO: add summary to post meta
+    tags = ""
+    for tag in data["tags"]:
+        tags += "<span class=\"chip bg-primary\">#" + tag + "</span>"
+    post_summary_content = post_summary_content.replace(POST_SUMMARY_TAGS_PLACEHOLDER, tags)
     return post_summary_content
 
 for subdir, dirs, files in os.walk(_POSTS_DIR):
